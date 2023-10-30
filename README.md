@@ -22,13 +22,11 @@ The Gitub Actions workflows require the following
 [secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)
 to be specified. They can be set as Environment, Repository, or Organization secrets as appropriate.
 
-| ----------- | ----------- | ----------------------- |
 | Secret Name | Description | Default Value / Example |
 | ----------- | ----------- | ----------------------- |
 | api-url     | Auditmation platform API (optional) | `https://api.nf.auditmation.io` |
 | api-key     | Auditmation API Key | ex: `1e96b700-7740-11ee-b962-0242ac120002` |
 | org-id      | Auditmation Org ID | ex: `1e96b700-7740-11ee-b962-0242ac120005` |
 | boundary-id | Boundary ID (optional). Required if more than 1 boundary present. | ex: `1e96b700-7740-11ee-b962-0242ac120009` |
-| ----------- | ----------- | ----------------------- |
 
 
