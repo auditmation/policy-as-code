@@ -1,91 +1,34 @@
-# Repository Quick Start template
-## Index
-  - [Overview](#overview) 
-  - [Getting Started](#getting-started)
-  - [Contributing](#contributing)
-  - [Authors](#authors)
-  - [License](#license)
-<!--  Other options to write Readme
-  - [Deployment](#deployment)
-  - [Used or Referenced Projects](Used-or-Referenced-Projects)
--->
-## About RepositoryTemplate
-<!--Wirte one paragraph of project description -->  
-This project's purpose is to create a make Repository with a collection of default settings  
+# Auditmation Policy As Code
 
-## Overview
-<!-- Write Overview about this project -->
-**If you use this template, you can use this function**
-- Issue Template
-- Pull Request Template
-- Commit Template
-- Readme Template
-- Contribute Template
-- Pull Request Build Test(With Github Actions)
+This template will create a new repository that allows compliance programs to be
+built in GitHub using Markdown and YAML, allowing for:
+  - Enhanced workflow where different teams can work in parallel
+  - Peer reviews, pull requests, and diffs, and attributable changes
+  - Intelligent merging of changes from external sources
+  - Pipeline processing to kick off testing, update downstream artifcats, notifications, ...
 
 ## Getting Started
-**click `Use this template` and use this template!**
-<!--
-### Depencies
- Write about need to install the software and how to install them 
--->
-### Installing
-<!-- A step by step series of examples that tell you how to get a development 
-env running
 
-Say what the step will be
+### Pre-requisities
+1. This tool requires a valid [Auditmation](https://auditmation.io) account and system boundary.
+1. Policy content license, either acquired in Auditmation platform or directly from author ([ComplianceForge](https://complianceforge.com), etc).
 
-    Give the example
 
-And repeat
+### Create a new repo
+Click the green `Use this template` button on this page and then select `Create a new repository`. Complete fields to taste. No need to `Include all branches` so leave that unchecked.
 
-    until finished
--->
-1. Click `Use this template` button 
-2. Create New Repository
-3. Update Readme and Others(Other features are noted in comments.)
-<!--
-## Deployment
- Add additional notes about how to deploy this on a live system
- -->
-## Contributing
-<!-- Write the way to contribute -->
-I am looking for someone to help with this project. Please advise and point out.  
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code
-of conduct, and the process for submitting pull requests to us.
+### Secrets Configuration
+The Gitub Actions workflows require the following
+[secrets](https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions)
+to be specified. They can be set as Environment, Repository, or Organization secrets as appropriate.
 
-## Authors
-  - [Always0ne](https://github.com/Always0ne) - **SangIl Hwang** - <si8363@soongsil.ac.kr>
+| ----------- | ----------- | ----------------------- |
+| Secret Name | Description | Default Value / Example |
+| ----------- | ----------- | ----------------------- |
+| api-url     | Auditmation platform API (optional) | `https://api.nf.auditmation.io` |
+| api-key     | Auditmation API Key | ex: `1e96b700-7740-11ee-b962-0242ac120002` |
+| org-id      | Auditmation Org ID | ex: `1e96b700-7740-11ee-b962-0242ac120005` |
+| boundary-id | Boundary ID (optional). Required if more than 1 boundary present. | ex: `1e96b700-7740-11ee-b962-0242ac120009` |
+| ----------- | ----------- | ----------------------- |
 
-See also the list of [contributors](https://github.com/always0ne/readmeTemplate/contributors)
-who participated in this project.
-<!--
-## Used or Referenced Projects
- - [referenced Project](project link) - **LICENSE** - little-bit introduce
--->
 
-## License
-
-```
-MIT License
-
-Copyright (c) 2020 always0ne
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
