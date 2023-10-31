@@ -14,8 +14,7 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: auditmation-policy-builder@0.0.1
-        can-uses: bitcoder/dummy-action@v9
+      - uses: auditmation/auditmation-policy-builder@main
         with:
           operation: load-controls
           api-key: ${{secrets.API_KEY}}
