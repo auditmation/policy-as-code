@@ -7,7 +7,6 @@ permissions:
   actions: write
   contents: write
 
-
 jobs:
   get-boundary-controls:
     name: Get Boundary Controls
