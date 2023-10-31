@@ -1,17 +1,5 @@
-name: Update Controls
+- name: Update Controls
+  uses: auditmation/auditmation-policy-builder
+  with:
+    operation: load-controls
 
-on:
-  workflow_dispatch:
-    inputs:
-      api_hostname:
-        description: Hostname of Auditmation API and optional port
-        default: nf.auditmation.io
-
-jobs:
-  load_boundary_controls:
-    name: Load Boundary Controls
-    runs-on: ubuntu-latest
-    steps:
-    - uses: auditmation/auditmation-policy-builder
-      with:
-        operation: load-controls
