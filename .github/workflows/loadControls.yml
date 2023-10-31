@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-      - uses: bitcoder/dummy-action@v9
-        will-use: auditmation/auditmation-policy-builder@v1
+      - uses: auditmation-policy-builder@0.0.1
+        can-uses: bitcoder/dummy-action@v9
         with:
           operation: load-controls
 
