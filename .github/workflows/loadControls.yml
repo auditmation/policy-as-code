@@ -18,4 +18,7 @@ jobs:
         can-uses: bitcoder/dummy-action@v9
         with:
           operation: load-controls
-
+          api-key: ${{secrets.API_KEY}}
+          org-id: ${{secrets.ORG_ID}}
+          boundary-id: ${{secrets.BOUNDARY_ID}}
+          url: ${{secrets.URL}}
