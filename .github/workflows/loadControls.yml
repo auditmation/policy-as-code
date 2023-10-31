@@ -15,7 +15,6 @@ jobs:
 
     steps:
       - uses: auditmation/auditmation-policy-builder@main
-        can-uses: bitcoder/dummy-action@v9
         with:
           operation: load-controls
 
