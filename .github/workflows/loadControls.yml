@@ -1,5 +1,20 @@
 name: Update Controls
-uses: auditmation/auditmation-policy-builder
-with:
-operation: load-controls
+
+on: 
+  workflow_dispatch:
+
+permissions:
+  actions: write
+  contents: write
+
+
+jobs:
+  get-boundary-controls:
+    name: Get Boundary Controls
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: auditmation/auditmation-policy-builder
+        with:
+          operation: load-controls
 
