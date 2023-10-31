@@ -1,5 +1,5 @@
-- name: Update Controls
-  uses: auditmation/auditmation-policy-builder
-  with:
-    operation: load-controls
+name: Update Controls
+uses: auditmation/auditmation-policy-builder
+with:
+operation: load-controls
 
